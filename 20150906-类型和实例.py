@@ -34,4 +34,49 @@ Traceback (most recent call last):
 NameError: name 'a' is not defined
 >>> s.age
 25
+>>> s2 = Student()
+>>> s2.set_age(26)
+Traceback (most recent call last):
+  File "<pyshell#19>", line 1, in <module>
+    s2.set_age(26)
+AttributeError: 'Student' object has no attribute 'set_age'
+>>> def set_score(self,score:)
+SyntaxError: invalid syntax
+>>> def set_score(self,score):
+	self.score = score
+
+	
+>>> Student.set_score = MethodType(set_score,Student)
+>>> s2.set_score(99)
+>>> s.set_scire(100)
+Traceback (most recent call last):
+  File "<pyshell#26>", line 1, in <module>
+    s.set_scire(100)
+AttributeError: 'Student' object has no attribute 'set_scire'
+>>> s.set_score(100)
+>>> s.score
+100
+>>> s2.score
+100
+>>> s2.set_score(99)
+>>> s2.score
+99
+>>> s.score
+99
+>>> s.set_score
+<bound method type.set_score of <class '__main__.Student'>>
+>>> s2.set_score
+<bound method type.set_score of <class '__main__.Student'>>
+>>> class Student(object):
+	__slots__ = ('name','age')
+
+	
+>>> s= Student()
+>>> s.name = 'Michael'
+>>> s.age = 25
+>>> s.score = 99
+Traceback (most recent call last):
+  File "<pyshell#41>", line 1, in <module>
+    s.score = 99
+AttributeError: 'Student' object has no attribute 'score'
 >>> 
