@@ -79,4 +79,171 @@ Traceback (most recent call last):
   File "<pyshell#41>", line 1, in <module>
     s.score = 99
 AttributeError: 'Student' object has no attribute 'score'
+>>> class graduateStudent(Student):
+	pass
+
+>>> g = gtaduateStudent()
+Traceback (most recent call last):
+  File "<pyshell#45>", line 1, in <module>
+    g = gtaduateStudent()
+NameError: name 'gtaduateStudent' is not defined
+>>> g = graduateStudent(Student):
+	
+SyntaxError: invalid syntax
+>>> g = gtaduateStudent(Student)
+Traceback (most recent call last):
+  File "<pyshell#47>", line 1, in <module>
+    g = gtaduateStudent(Student)
+NameError: name 'gtaduateStudent' is not defined
+>>> g = gradunateStudent(Student)
+Traceback (most recent call last):
+  File "<pyshell#48>", line 1, in <module>
+    g = gradunateStudent(Student)
+NameError: name 'gradunateStudent' is not defined
+>>> g = graduateStudent(Student)
+Traceback (most recent call last):
+  File "<pyshell#49>", line 1, in <module>
+    g = graduateStudent(Student)
+TypeError: object() takes no parameters
+>>> g =graduateStudent()
+>>> g.score = 999
+>>> g.score
+999
+>>> s = Student()
+>>> s.score = 8888
+Traceback (most recent call last):
+  File "<pyshell#54>", line 1, in <module>
+    s.score = 8888
+AttributeError: 'Student' object has no attribute 'score'
+>>> class Student(object):
+	def get_score(self):
+		return self._score
+	def set_score(self,value):
+		if not isinstance(value,int):
+			raise ValueError('score must be an integer!')
+		if value <0 or value > 100:
+			raise ValueError('score must between 0~100!')
+		self._score = value
+
+		
+>>> s = Student()
+>>> s.set_score(60)
+>>> s.get_score()
+60
+>>> s.set_score(999)
+Traceback (most recent call last):
+  File "<pyshell#68>", line 1, in <module>
+    s.set_score(999)
+  File "<pyshell#64>", line 8, in set_score
+    raise ValueError('score must between 0~100!')
+ValueError: score must between 0~100!
+>>> class Student(object):
+	@property
+	def score(self):
+		return self.score
+	@score.stter
+	def score(self,value):
+		if not isinstance(value,int):
+			raise ValueError('score must be an integer!')
+		if value < 0 or value > 100:
+			raise ValueError('score must between 0~100!')
+		self._score = value
+
+		
+Traceback (most recent call last):
+  File "<pyshell#80>", line 1, in <module>
+    class Student(object):
+  File "<pyshell#80>", line 5, in Student
+    @score.stter
+AttributeError: 'property' object has no attribute 'stter'
+>>> class Student(object):
+	@property
+	def score(self):
+		return self.score
+	
+	@score.stter
+	def score(self,value):
+		if not isinstance(value,int):
+			raise ValueError('score must be an integer!')
+		if value < 0 or value > 100:
+			raise ValueError('score must between 0~100!')
+		self._score = value
+
+		
+Traceback (most recent call last):
+  File "<pyshell#82>", line 1, in <module>
+    class Student(object):
+  File "<pyshell#82>", line 6, in Student
+    @score.stter
+AttributeError: 'property' object has no attribute 'stter'
+>>> class Student(object):
+	@property
+	def score(self):
+		return self.score
+
+	
+	@score.setter
+	def score(self,value):
+		if not isinstance(value,int):
+			raise ValueError('score must be an integer!')
+		if value < 0 or value > 100:
+			raise ValueError('score must between 0~100!')
+		self._score = value
+
+		
+>>> class Student(object):
+	@property
+	def score(self):
+		return self.score
+	
+	@score.setter
+	def score(self,value):
+		if not isinstance(value,int):
+			raise ValueError('score must be an integer!')
+		if value < 0 or value > 100:
+			raise ValueError('score must between 0~100!')
+		self._score = value
+
+		
+>>> class Student(object):
+	@property
+	def score(self):
+		return self.score
+
+	@score.stter
+	def score(self,value):
+		if not isinstance(value,int):
+			raise ValueError('score must be an integer!')
+		if value < 0 or value > 100:
+			raise ValueError('score must between 0~100!')
+		self._score = value
+
+		
+Traceback (most recent call last):
+  File "<pyshell#88>", line 1, in <module>
+    class Student(object):
+  File "<pyshell#88>", line 6, in Student
+    @score.stter
+AttributeError: 'property' object has no attribute 'stter'
+>>> class Student(object):
+	@property
+	def score(self):
+		return self.score
+
+	
+	@score.stter
+	def score(self,value):
+		if not isinstance(value,int):
+			raise ValueError('score must be an integer!')
+		if value < 0 or value > 100:
+			raise ValueError('score must between 0~100!')
+		self._score = value
+
+		
+Traceback (most recent call last):
+  File "<pyshell#90>", line 1, in <module>
+    class Student(object):
+  File "<pyshell#90>", line 7, in Student
+    @score.stter
+AttributeError: 'property' object has no attribute 'stter'
 >>> 
