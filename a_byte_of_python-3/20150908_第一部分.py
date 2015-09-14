@@ -4,7 +4,7 @@ Type "copyright", "credits" or "license()" for more information.
 Hello World
 >>> a = 52.3E-4
 >>> a
-0.00523
+0.005232
 >>> #注意科学计数法的应用
 >>> a = '空格会保留    ！    '
 >>> a
